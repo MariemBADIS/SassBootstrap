@@ -1,0 +1,23 @@
+
+@mixin background-commun {
+background-image: linear-gradient(to right top, #21a3d5, #1c95c9, #1788bc, #137baf, $colorPrincipale);
+}
+
+@mixin button-commun {
+    .btn-info {
+        background-image: $background-btn-contenu-;
+        border-radius: 10px;
+        padding: 5px 45px;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        margin-right: 10px;
+        margin-top: 10px;
+        &:hover {
+          border: 1px solid #219fd2;
+          background: #fff;
+          color: #219fd2;
+        }
+      }
+}
+

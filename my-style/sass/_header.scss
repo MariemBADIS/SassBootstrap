@@ -1,0 +1,80 @@
+/* STYLE HEADER */
+header {
+    @include background-commun();
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    .logo {
+      img {
+        max-width: 150px;
+        width: 100%;
+      }
+    }
+    .menu {
+      ul {
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        * {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all 0.35s ease;
+          transition: all 0.35s ease;
+        }
+        li {
+          font-family: arial;
+          text-transform: uppercase;
+          vertical-align: middle;
+          list-style: outside none none;
+          margin: 0.5em 1.5em;
+          padding: 0;
+          a {
+            color: #fff;
+            font-size: 13px;
+            padding: 0.3em 0;
+            color: rgba(255, 255, 255, 0.5);
+            position: relative;
+            text-decoration: none;
+            &:before,
+            &:after {
+              height: 2px;
+              position: absolute;
+              content: "";
+              -webkit-transition: all 0.35s ease;
+              transition: all 0.35s ease;
+              background-color: $colorHoverMenu;
+              width: 0;
+            }
+            &:before {
+              top: 0;
+              left: 0;
+            }
+            &:after {
+              bottom: 0;
+              right: 0;
+            }
+            &:hover {
+              color: #fff;
+            }
+            &:hover:before,
+            &:hover:after {
+              width: 100%;
+            }
+          }
+        }
+        li.current {
+          a {
+            color: #fff;
+            &:before,
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* END STYLE HEADER */
